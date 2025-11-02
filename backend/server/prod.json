@@ -1,0 +1,189 @@
+{
+  "products": [
+    {
+      "id": "3",
+      "title": "Sony WH-1000XM5 Headphones",
+      "price": 29990,
+      "category": "Headphones",
+      "description": "Industry-leading noise cancellation wireless headphones with 30 hours of battery life and superb sound quality.",
+      "image": "https://encrypted-tbn1.gstatic.com/shopping?q=tbn:ANd9GcQ_BfgVVX2prN0xuhV9fycaTWXESusQaEiicOf9Fk2Lw2s9qmmoz3FITVM7pKWHX1_WOlZLEfv9RiGx786vO0q-hPzkJPeTfqw87IJMywCJe-Z0whY-4STsVStZI4ryFQILxR34JQ&usqp=CAc"
+    },
+    {
+      "id": "5",
+      "title": "Dell XPS 15 9530",
+      "price": 154999,
+      "category": "Laptop",
+      "description": "Powerful performance laptop with Intel i9 processor, NVIDIA RTX graphics, and stunning 4K InfinityEdge display.",
+      "image": "https://images.unsplash.com/photo-1588872657578-7efd1f1555ed?auto=format&fit=crop&w=800&q=80"
+    },
+    {
+      "id": "6",
+      "title": "Apple Watch Series 9",
+      "price": 41900,
+      "category": "Smartwatch",
+      "description": "Advanced smartwatch with double-tap gesture, health tracking, and Always-On Retina display.",
+      "image": "https://encrypted-tbn0.gstatic.com/shopping?q=tbn:ANd9GcTfxrmqLWBBB4Kq72bcJIDKymaI6NPJNPC3IEezlS9UWM1X0rB1VexvkqJ0IeXYkOsMN_7CdeIFux976QaLt4kx0XexXBguyHZSXe6ZVARvNrfXOkvAinChUDZfB6RjRwzVnIYloA&usqp=CAc"
+    },
+    {
+      "id": "7",
+      "title": "Canon EOS R6 Mark II",
+      "price": 214999,
+      "category": "Camera",
+      "description": "Full-frame mirrorless camera with 24.2MP sensor, 4K 60fps video, and advanced autofocus system.",
+      "image": "https://images.unsplash.com/photo-1526170375885-4d8ecf77b99f?auto=format&fit=crop&w=800&q=80"
+    },
+    {
+      "id": "8",
+      "title": "Apple iPad Air (5th Gen)",
+      "price": 59900,
+      "category": "Tablet",
+      "description": "iPad Air powered by M1 chip, 10.9-inch Liquid Retina display, and support for Apple Pencil (2nd Gen).",
+      "image": "https://images.unsplash.com/photo-1606112219348-204d7d8b94ee?auto=format&fit=crop&w=800&q=80"
+    },
+    {
+      "id": "9",
+      "title": "Dell XPS 15 (2024)",
+      "price": 179999,
+      "category": "Laptop",
+      "description": "Dell XPS 15 with Intel Core i9 processor, NVIDIA RTX 4060 GPU, and 15.6-inch OLED display.",
+      "image": "https://images.unsplash.com/photo-1517336714731-489689fd1ca8?auto=format&fit=crop&w=800&q=80"
+    },
+    {
+      "id": "10",
+      "title": "Asus ROG Zephyrus G14",
+      "price": 159990,
+      "category": "Gaming Laptop",
+      "description": "Asus ROG Zephyrus G14 with AMD Ryzen 9 and RTX 4070 GPU, designed for high-end gaming.",
+      "image": "https://images.unsplash.com/photo-1615663245857-ac93bb7c39e7?auto=format&fit=crop&w=800&q=80"
+    },
+    {
+      "id": "11",
+      "title": "HP Spectre x360",
+      "price": 132999,
+      "category": "Laptop",
+      "description": "HP Spectre x360 convertible laptop with Intel Evo platform and 4K OLED touch display.",
+      "image": "https://images.unsplash.com/photo-1611186871348-b1ce696e52c9?auto=format&fit=crop&w=800&q=80"
+    },
+    {
+      "id": "12",
+      "title": "Sony WH-1000XM5",
+      "price": 29990,
+      "category": "Headphones",
+      "description": "Premium wireless noise-cancelling headphones with adaptive sound control and 30-hour battery life.",
+      "image": "https://www.shutterstock.com/image-photo/colorado-usa-may-1st-2023-wh1000xm5-2296616305"
+    },
+    {
+      "id": "13",
+      "title": "Bose QuietComfort Ultra",
+      "price": 31900,
+      "category": "Headphones",
+      "description": "Bose QuietComfort Ultra headphones with advanced noise cancellation and immersive audio experience.",
+      "image": "https://images.unsplash.com/photo-1581591524425-c7e0978865fc?auto=format&fit=crop&w=800&q=80"
+    },
+    {
+      "id": "15",
+      "title": "Canon EOS R10",
+      "price": 89990,
+      "category": "Camera",
+      "description": "Canon EOS R10 mirrorless camera with 24.2MP APS-C sensor and 4K 60fps video recording.",
+      "image": "https://images.unsplash.com/photo-1519183071298-a2962eadcdb2?auto=format&fit=crop&w=800&q=80"
+    },
+    {
+      "id": "16",
+      "title": "GoPro HERO12 Black",
+      "price": 45990,
+      "category": "Action Camera",
+      "description": "GoPro HERO12 Black featuring 5.3K HDR video, HyperSmooth 6.0 stabilization, and waterproof design.",
+      "image": "https://images.unsplash.com/photo-1555617981-1b56e3b4a01d?auto=format&fit=crop&w=800&q=80"
+    },
+    {
+      "id": "17",
+      "title": "DJI Mini 4 Pro Drone",
+      "price": 124999,
+      "category": "Drone",
+      "description": "DJI Mini 4 Pro lightweight drone with 4K HDR video, obstacle sensing, and extended flight time.",
+      "image": "https://images.unsplash.com/photo-1520986606214-8b456906c813?auto=format&fit=crop&w=800&q=80"
+    },
+    {
+      "id": "19",
+      "title": "Fitbit Charge 6",
+      "price": 17999,
+      "category": "Fitness Band",
+      "description": "Fitbit Charge 6 with heart rate monitor, GPS, and Google integration for health insights.",
+      "image": "https://images.unsplash.com/photo-1523275335684-37898b6baf30?auto=format&fit=crop&w=800&q=80"
+    },
+    {
+      "id": "20",
+      "title": "Amazon Echo Dot (5th Gen)",
+      "price": 5499,
+      "category": "Smart Speaker",
+      "description": "Amazon Echo Dot with Alexa voice assistant, improved bass, and LED display.",
+      "image": "https://images.unsplash.com/photo-1601933470928-c1c68a48e343?auto=format&fit=crop&w=800&q=80"
+    },
+    {
+      "id": "21",
+      "title": "Google Nest Hub (2nd Gen)",
+      "price": 8999,
+      "category": "Smart Display",
+      "description": "Google Nest Hub with 7-inch smart display, voice assistant, and smart home controls.",
+      "image": "https://www.shutterstock.com/pixelsquid/assets_v2/322/3222353641763510269/previews/G03-260nw.jpg"
+    },
+    {
+      "id": "22",
+      "title": "LG UltraGear 27-inch Gaming Monitor",
+      "price": 29999,
+      "category": "Monitor",
+      "description": "LG UltraGear 27-inch QHD gaming monitor with 165Hz refresh rate and 1ms response time.",
+      "image": "https://images.unsplash.com/photo-1602084564195-6e8b2a7b59d4?auto=format&fit=crop&w=800&q=80"
+    },
+    {
+      "id": "23",
+      "title": "Razer BlackWidow V4 Pro",
+      "price": 23999,
+      "category": "Keyboard",
+      "description": "Razer mechanical keyboard with Chroma RGB lighting, magnetic wrist rest, and macro support.",
+      "image": "https://images.unsplash.com/photo-1610411936766-cb6f0b8f64e7?auto=format&fit=crop&w=800&q=80"
+    },
+    {
+      "id": "24",
+      "title": "Logitech MX Master 3S",
+      "price": 9995,
+      "category": "Mouse",
+      "description": "Logitech MX Master 3S ergonomic wireless mouse with silent clicks and MagSpeed scrolling.",
+      "image": "https://images.unsplash.com/photo-1602084564454-f1c66f4b9b1a?auto=format&fit=crop&w=800&q=80"
+    },
+    {
+      "id": "25",
+      "title": "Anker PowerCore 20000",
+      "price": 6999,
+      "category": "Power Bank",
+      "description": "Anker PowerCore 20000mAh portable charger with PowerIQ fast charging technology.",
+      "image": "https://images.unsplash.com/photo-1614149162883-504ce4d13909?auto=format&fit=crop&w=800&q=80"
+    },
+    {
+      "id": "26",
+      "title": "Philips Hue Smart Bulb Kit",
+      "price": 8999,
+      "category": "Smart Home",
+      "description": "Philips Hue color-changing smart bulb starter kit compatible with Alexa and Google Home.",
+      "image": "https://images.unsplash.com/photo-1582719478250-c89cae4dc85b?auto=format&fit=crop&w=800&q=80"
+    },
+    {
+      "id": "27",
+      "title": "Apple TV 4K (3rd Gen)",
+      "price": 16900,
+      "category": "Streaming Device",
+      "description": "Apple TV 4K with A15 Bionic chip, HDR10+, and Siri Remote for cinematic entertainment.",
+      "image": "https://images.unsplash.com/photo-1587825140708-dfaf72ae4b04?auto=format&fit=crop&w=800&q=80"
+    },
+    {
+      "id": "28",
+      "title": "Google Pixel Buds Pro",
+      "price": 18999,
+      "category": "Earbuds",
+      "description": "Google Pixel Buds Pro with Active Noise Cancellation and up to 31 hours total battery life.",
+      "image": "https://images.unsplash.com/photo-1589391886645-d51941baf7f1?auto=format&fit=crop&w=800&q=80"
+    }
+  ],
+  "cart": []
+}

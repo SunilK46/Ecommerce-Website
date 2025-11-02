@@ -1,0 +1,383 @@
+# Ecommerce-Website
+
+# 🛍️ FLYBUY - E-Commerce Product Management App
+
+A full-featured e-commerce application built with **React**, **Redux Toolkit**, and **JSON Server**. This project demonstrates modern React development practices with state management, API integration, and responsive UI design.
+
+---
+
+## 📋 Table of Contents
+
+- [Features](#features)
+- [Tech Stack](#tech-stack)
+- [Project Structure](#project-structure)
+- [Setup Instructions](#setup-instructions)
+- [Running the Application](#running-the-application)
+- [Features Walkthrough](#features-walkthrough)
+- [Redux Architecture](#redux-architecture)
+- [API Endpoints](#api-endpoints)
+
+---
+
+## ✨ Features
+
+### Core Features
+- ✅ **Product Management** (CRUD Operations)
+  - View all products
+  - Add new products
+  - Edit existing products
+  - Delete products
+  - View product details
+
+- ✅ **Shopping Cart**
+  - Add products to cart
+  - Update product quantities
+  - Remove items from cart
+  - Cart badge with item count
+  - Cart persistence (localStorage)
+  - Save cart functionality
+
+### Advanced Features
+- 🔍 **Search** with debouncing (500ms delay)
+- 🏷️ **Category Filter** (dynamic categories from products)
+- 📊 **Price Sorting** (Low to High, High to Low)
+- 📄 **Pagination** (8 items per page)
+- 🔔 **Toast Notifications** (Success, Error, Warning)
+- ✅ **Form Validation** (with inline error messages)
+- 🌓 **Dark Mode** (Light/Dark theme toggle)
+- 📱 **Fully Responsive** (Mobile, Tablet, Desktop)
+
+---
+
+## 🛠️ Tech Stack
+
+### Frontend
+- **React** 18+ (with Hooks)
+- **Redux Toolkit** (State Management)
+- **React Router** v6 (Navigation)
+- **Tailwind CSS** (Styling)
+- **Material-UI** (NavBar components)
+- **React Toastify** (Toast notifications)
+
+### Backend
+- **JSON Server** (Mock REST API)
+
+### Development Tools
+- **Axios** (HTTP client)
+- **ESLint** (Code linting)
+- **Vite** (Build tool)
+
+---
+
+## 📁 Project Structure
+
+```
+ecommercw_website/
+├── backend/
+│   └── server/
+│       └── prod.json              # JSON Server database
+├── src/
+│   ├── api_config/
+│   │   └── AxiosInstance.js       # Axios configuration
+│   ├── common/
+│   │   ├── constants/
+│   │   │   ├── textConstants.js   # All text strings
+│   │   │   └── config.js          # App configuration
+│   │   ├── ui/
+│   │   │   ├── Button.jsx         # Reusable button
+│   │   │   ├── Input.jsx          # Reusable input
+│   │   │   ├── Card.jsx           # Product card
+│   │   │   ├── Loader.jsx         # Loading spinner
+│   │   │   └── Nav.jsx            # Navigation bar
+│   │   └── utils/
+│   │       ├── storage.js         # localStorage helpers
+│   │       ├── formatters.js      # Formatting utilities
+│   │       ├── validators.js      # Form validation
+│   │       └── ToastConfig.js     # Toast configuration
+│   ├── pages/
+│   │   ├── Home.jsx               # Main products page
+│   │   ├── Cart.jsx               # Shopping cart page
+│   │   └── ViewProd.jsx           # Product details page
+│   ├── products/
+│   │   ├── components/
+│   │   │   ├── add_prod/
+│   │   │   │   └── AddProduct.jsx
+│   │   │   ├── edit_prod/
+│   │   │   │   └── Edit_prod.jsx
+│   │   │   └── delete_prod/
+│   │   │       └── Delete_prod.jsx
+│   │   └── slice_product/
+│   │       ├── ProdSlice.jsx      # Products Redux slice
+│   │       ├── prod-thunk.jsx     # Products async actions
+│   ├──  cart/
+│   │       └── slice_cart/  
+│   │                 ├── CartSlice.jsx      # Cart Redux slice
+│   │                 ├── Cart-thunk.jsx     # Cart async actions
+│   │                 └── cartSelectors.js   # Cart state selectors
+│   ├── routes/
+│   │   └── Route.jsx              # Route configuration
+│   ├── theme/
+│   │   └── store.js               # Redux store
+│   ├── RootLayout.jsx             # Root layout with theme
+│   └── main.jsx                   # App entry point
+└── package.json
+```
+
+---
+
+## 🚀 Setup Instructions
+
+### Prerequisites
+- Node.js (v16 or higher)
+- npm or yarn
+
+### Step 1: Clone the Repository
+```bash
+git clone <your-repo-url>
+cd ecommercw_website
+```
+
+### Step 2: Install Dependencies
+```bash
+npm install
+```
+
+### Step 3: Install JSON Server Globally
+```bash
+npm install -g json-server
+```
+
+### Step 4: Update Database Path
+Make sure your `prod.json` file has this structure:
+```json
+{
+  "products": [
+    {
+      "id": "1",
+      "title": "Product Name",
+      "price": 29990,
+      "category": "Category",
+      "description": "Product description",
+      "image": "image-url"
+    }
+  ],
+  "cart": []
+}
+```
+
+---
+
+## ▶️ Running the Application
+
+### Terminal 1: Start JSON Server
+```bash
+cd backend/server
+json-server --watch prod.json --port 7000
+```
+JSON Server will run on `http://localhost:7000`
+
+### Terminal 2: Start React App
+```bash
+npm run dev
+```
+React app will run on `http://localhost:5173`
+
+---
+
+## 🎯 Features Walkthrough
+
+### 1. Product Listing (Home Page)
+- **Search**: Type in search bar with 500ms debounce
+- **Filter**: Select category from dropdown
+- **Sort**: Sort by price or name
+- **Pagination**: Navigate through pages (8 products per page)
+- **Add to Cart**: Click "Add to Cart" button on product cards
+
+### 2. Product Details
+- View full product information
+- Add to cart
+- Edit product
+- Delete product
+- Back to home
+
+### 3. Shopping Cart
+- View all cart items
+- Increase/decrease quantity
+- Remove items
+- Save cart to localStorage
+- Clear entire cart
+- Proceed to checkout (UI ready)
+- Total calculation
+
+### 4. Product Management
+- **Add Product**: Form with validation
+- **Edit Product**: Pre-filled form with validation
+- **Delete Product**: Confirmation dialog
+
+### 5. Notifications
+- Success toast on add/update/delete
+- Error toast on failures
+- Warning toast on remove from cart
+
+---
+
+## 🏗️ Redux Architecture
+
+### Store Structure
+```javascript
+{
+  products: {
+    products: [],      // All products
+    product: {},       // Single product
+    loading: false,
+    error: null
+  },
+  cart: {
+    cartItems: [],     // Cart items
+    loading: false,
+    error: null,
+    totalQuantity: 0,  // Total items count
+    totalAmount: 0     // Total price
+  }
+}
+```
+
+### Slices
+1. **productsSlice**: Manages product CRUD operations
+2. **cartSlice**: Manages cart operations and calculations
+
+### Thunks (Async Actions)
+- `fetchProducts()` - GET all products
+- `addProducts(data)` - POST new product
+- `editProducts(data)` - PUT update product
+- `deleteProducts(id)` - DELETE product
+- `viewProducts(id)` - GET single product
+- `fetchCart()` - GET cart items
+- `addToCart(product)` - POST/PUT cart item
+- `updateCartQuantity({id, quantity})` - PATCH quantity
+- `removeFromCart(id)` - DELETE cart item
+- `clearCart()` - DELETE all cart items
+
+---
+
+## 🔌 API Endpoints
+
+### Products
+- `GET /products` - Get all products
+- `GET /products/:id` - Get product by ID
+- `POST /products` - Create product
+- `PUT /products/:id` - Update product
+- `DELETE /products/:id` - Delete product
+
+### Cart
+- `GET /cart` - Get cart items
+- `POST /cart` - Add item to cart
+- `PUT /cart/:id` - Update cart item
+- `PATCH /cart/:id` - Update quantity
+- `DELETE /cart/:id` - Remove cart item
+
+---
+
+## 📝 Key Concepts Demonstrated
+
+1. **Redux Toolkit**
+   - createSlice
+   - createAsyncThunk
+   - configureStore
+   - extraReducers
+
+2. **React Hooks**
+   - useState
+   - useEffect
+   - useMemo
+   - useSelector
+   - useDispatch
+   - useParams
+   - useNavigate
+
+3. **Best Practices**
+   - Separation of concerns
+   - Reusable components
+   - Constants for text/config
+   - Helper functions (utils)
+   - Form validation
+   - Error handling
+   - Loading states
+
+4. **Performance Optimization**
+   - Debounced search
+   - Memoized calculations (useMemo)
+   - Lazy loading ready
+
+---
+
+## 🎨 UI Features
+
+- **Responsive Design**: Works on mobile, tablet, desktop
+- **Dark Mode**: Toggle between light/dark themes
+- **Smooth Animations**: Hover effects, transitions
+- **Accessible**: Semantic HTML, ARIA labels
+- **Modern UI**: Clean, professional design
+
+---
+
+## 📦 Dependencies
+
+```json
+{
+  "react": "^18.2.0",
+  "react-dom": "^18.2.0",
+  "react-router-dom": "^6.x",
+  "@reduxjs/toolkit": "^1.9.x",
+  "react-redux": "^8.x",
+  "axios": "^1.x",
+  "react-toastify": "^9.x",
+  "@mui/material": "^5.x",
+  "tailwindcss": "^3.x"
+}
+```
+
+---
+
+## 🐛 Troubleshooting
+
+### JSON Server not working?
+```bash
+# Make sure you're in the correct directory
+cd backend/server
+json-server --watch prod.json --port 7000
+```
+
+### Port already in use?
+```bash
+# Change port in config.js and restart JSON Server
+json-server --watch prod.json --port 8000
+```
+
+### Toast not showing?
+Make sure `ToastContainer` is added in `RootLayout.jsx`
+
+---
+
+## License
+
+This project is for learning purposes.
+
+---
+
+##  Author
+
+**Your Name**
+- GitHub: [https://github.com/SunilK46/]
+- Email: sunilsksuni46@gmail.com
+
+---
+
+##  Acknowledgments
+
+- Redux Toolkit documentation
+- React documentation
+- Tailwind CSS
+- Material-UI
+
+---
