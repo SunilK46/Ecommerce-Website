@@ -2,12 +2,6 @@ import React, { useEffect, useState } from "react";
 import { useDispatch, useSelector } from "react-redux";
 import { useNavigate, useParams } from "react-router-dom";
 import { editProducts, viewProducts } from "../../slice_product/Prod-thunk";
-import { validateProductForm } from "../../../common/utils/validators";
-import { showSuccessToast, showErrorToast } from "../../../common/utils/ToastConfig";
-import { TEXT } from "../../../common/constants/textConstants";
-import Input from "../../../common/ui/Input";
-import Button from "../../../common/ui/Button";
-import Loader from "../../../common/ui/Loader";
 
 const Edit_prod = () => {
   const { product = {}, loading, error } = useSelector((state) => state.products);
@@ -18,9 +12,6 @@ const Edit_prod = () => {
     description: "",
     image: "",
   });
-
-  const [errors, setErrors] = useState({});
-  const [isSubmitting, setIsSubmitting] = useState(false);
 
   const dispatch = useDispatch();
   const { id } = useParams();
@@ -40,140 +31,82 @@ const Edit_prod = () => {
       ...prev,
       [name]: value,
     }));
-    
-    if (errors[name]) {
-      setErrors((prev) => ({
-        ...prev,
-        [name]: ""
-      }));
-    }
   };
 
-  const handleSubmit = async (e) => {
+  const handleSubmit = (e) => {
     e.preventDefault();
-    
-    const validation = validateProductForm(state);
-    
-    if (!validation.isValid) {
-      setErrors(validation.errors);
-      showErrorToast("Please fix the errors in the form");
-      return;
-    }
-
-    setIsSubmitting(true);
-
-    try {
-      await dispatch(editProducts({ id, ...state })).unwrap();
-      showSuccessToast(TEXT.PRODUCT_UPDATED);
-      navigate("/");
-    } catch (error) {
-      showErrorToast(TEXT.ERROR_OCCURRED);
-    } finally {
-      setIsSubmitting(false);
-    }
+    dispatch(editProducts({ id, ...state }));
+    alert("Product updated successfully!");
+    navigate("/");
   };
 
-  if (loading) return <Loader fullScreen text={TEXT.LOADING} />;
-  
-  if (error) return (
-    <div className="flex justify-center items-center min-h-screen">
-      <h2 className="text-red-500 text-xl">{error}</h2>
-    </div>
-  );
+  if (loading) return <h1 className="text-center mt-10">Loading...</h1>;
+  if (error) return <h2 className="text-center text-red-500 mt-10">{error}</h2>;
 
   return (
-    <div className="flex justify-center items-center min-h-screen p-4">
+    <div className="flex justify-center items-center min-h-screen p-4 bg-gray-50 dark:bg-gray-900">
       <form
         onSubmit={handleSubmit}
         className="w-full max-w-md bg-white dark:bg-gray-800 rounded-2xl shadow-xl p-6 space-y-4"
       >
-        <h2 className="text-2xl font-semibold text-center text-gray-800 dark:text-white mb-4">
-          {TEXT.PAGE_EDIT_PRODUCT}
+        <h2 className="text-2xl font-semibold text-center text-gray-800 dark:text-white">
+          Edit Product
         </h2>
 
-        <Input
+        <input
           type="text"
           name="title"
-          label={TEXT.FORM_TITLE_LABEL}
-          placeholder={TEXT.FORM_TITLE_PLACEHOLDER}
+          placeholder="Enter product title"
           value={state.title || ""}
           onChange={handleChange}
-          error={errors.title}
           required
+          className="w-full border border-gray-300 dark:border-gray-600 rounded-lg p-2 focus:outline-none focus:ring-2 focus:ring-blue-400 dark:bg-gray-700 dark:text-white"
         />
 
-        <Input
+        <input
           type="number"
           name="price"
-          label={TEXT.FORM_PRICE_LABEL}
-          placeholder={TEXT.FORM_PRICE_PLACEHOLDER}
+          placeholder="Enter price"
           value={state.price || ""}
           onChange={handleChange}
-          error={errors.price}
           required
+          className="w-full border border-gray-300 dark:border-gray-600 rounded-lg p-2 focus:outline-none focus:ring-2 focus:ring-blue-400 dark:bg-gray-700 dark:text-white"
         />
 
-        <Input
+        <input
           type="text"
           name="category"
-          label={TEXT.FORM_CATEGORY_LABEL}
-          placeholder={TEXT.FORM_CATEGORY_PLACEHOLDER}
+          placeholder="Enter category"
           value={state.category || ""}
           onChange={handleChange}
-          error={errors.category}
           required
+          className="w-full border border-gray-300 dark:border-gray-600 rounded-lg p-2 focus:outline-none focus:ring-2 focus:ring-blue-400 dark:bg-gray-700 dark:text-white"
         />
 
-        <div className="mb-4">
-          <label className="block text-sm font-medium text-gray-700 dark:text-gray-300 mb-1">
-            {TEXT.FORM_DESCRIPTION_LABEL}
-            <span className="text-red-500 ml-1">*</span>
-          </label>
-          <textarea
-            name="description"
-            placeholder={TEXT.FORM_DESCRIPTION_PLACEHOLDER}
-            value={state.description || ""}
-            onChange={handleChange}
-            className={`w-full px-3 py-2 border rounded-lg h-24 resize-none focus:outline-none focus:ring-2 focus:ring-blue-400 dark:bg-gray-800 dark:text-white ${
-              errors.description ? 'border-red-500' : 'border-gray-300 dark:border-gray-600'
-            }`}
-          />
-          {errors.description && (
-            <p className="mt-1 text-sm text-red-500">{errors.description}</p>
-          )}
-        </div>
+        <textarea
+          name="description"
+          placeholder="Enter description"
+          value={state.description || ""}
+          onChange={handleChange}
+          required
+          className="w-full border border-gray-300 dark:border-gray-600 rounded-lg p-2 h-24 resize-none focus:outline-none focus:ring-2 focus:ring-blue-400 dark:bg-gray-700 dark:text-white"
+        ></textarea>
 
-        <Input
+        <input
           type="text"
           name="image"
-          label={TEXT.FORM_IMAGE_LABEL}
-          placeholder={TEXT.FORM_IMAGE_PLACEHOLDER}
+          placeholder="Enter image URL"
           value={state.image || ""}
           onChange={handleChange}
-          error={errors.image}
+          className="w-full border border-gray-300 dark:border-gray-600 rounded-lg p-2 focus:outline-none focus:ring-2 focus:ring-blue-400 dark:bg-gray-700 dark:text-white"
         />
 
-        <div className="flex gap-3">
-          <Button
-            type="submit"
-            variant="primary"
-            size="lg"
-            loading={isSubmitting}
-            className="flex-1"
-          >
-            {TEXT.BTN_UPDATE}
-          </Button>
-          
-          <Button
-            type="button"
-            variant="secondary"
-            size="lg"
-            onClick={() => navigate("/")}
-            className="flex-1"
-          >
-            {TEXT.BTN_CANCEL}
-          </Button>
-        </div>
+        <button
+          type="submit"
+          className="w-full bg-blue-600 hover:bg-blue-700 text-white font-semibold py-2 rounded-lg transition duration-200"
+        >
+          Update
+        </button>
       </form>
     </div>
   );

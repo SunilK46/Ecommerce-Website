@@ -3,9 +3,8 @@ import { Link } from 'react-router-dom';
 import { useDispatch } from 'react-redux';
 import { addToCart } from '../../cart/slice_cart/Cart-Thunks';
 import { calculateTotals } from '../../cart/slice_cart/CartSlice';
-import { showErrorToast, showSuccessToast } from '../utils/ToastConfig';
-import { TEXT } from '../constants/TextConstants';
-import { formatCurrency } from '../utils/Formatters';
+import { showSuccessToast,showErrorToast } from '../utils/ToastConfig';
+
 
 const Card = ({ productCard }) => {
   const dispatch = useDispatch();
@@ -16,9 +15,10 @@ const Card = ({ productCard }) => {
     
     dispatch(addToCart(product)).then(() => {
       dispatch(calculateTotals());
-      showSuccessToast(`${product.title} ${TEXT.CART_ITEM_ADDED}`);
+showSuccessToast(`${product.title} added to cart!`);
     }).catch(() => {
-      showErrorToast(TEXT.ERROR_OCCURRED);
+      showErrorToast('Error adding to cart')
+      
     });
   };
 
@@ -50,7 +50,7 @@ const Card = ({ productCard }) => {
                   </h2>
                   
                   <p className="text-blue-600 font-bold text-xl mb-2">
-                    {formatCurrency(product.price)}
+                    ₹{Number(product.price).toLocaleString('en-IN')}
                   </p>
                   
                   <p className="text-gray-500 dark:text-gray-400 text-sm line-clamp-2 flex-1">
@@ -67,7 +67,7 @@ const Card = ({ productCard }) => {
               shadow-lg hover:shadow-xl transform hover:scale-105
               opacity-0 group-hover:opacity-100"
             >
-              🛒 {TEXT.BTN_ADD_TO_CART}
+              🛒 Add to Cart
             </button>
           </div>
         ))}

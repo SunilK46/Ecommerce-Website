@@ -11,7 +11,7 @@
     {
       "id": "5",
       "title": "Dell XPS 15 9530",
-      "price": 154999,
+      "price": "1577",
       "category": "Laptop",
       "description": "Powerful performance laptop with Intel i9 processor, NVIDIA RTX graphics, and stunning 4K InfinityEdge display.",
       "image": "https://images.unsplash.com/photo-1588872657578-7efd1f1555ed?auto=format&fit=crop&w=800&q=80"
@@ -183,7 +183,54 @@
       "category": "Earbuds",
       "description": "Google Pixel Buds Pro with Active Noise Cancellation and up to 31 hours total battery life.",
       "image": "https://images.unsplash.com/photo-1589391886645-d51941baf7f1?auto=format&fit=crop&w=800&q=80"
+    },
+    {
+      "id": "27bc",
+      "title": "Samsung A50s",
+      "price": "199998",
+      "category": "Electronics",
+      "description": "Crazy phone ",
+      "image": "https://www.etotalk.com/media/catalog/product/cache/f1f585d0b4e2610e7dbeee535ee5cea0/s/a/samsung_galaxy_a50s_purple.webp"
+    },
+    {
+      "id": "46a0",
+      "title": "samsung",
+      "price": "20000",
+      "category": "Smartphone",
+      "description": "mobile",
+      "image": "data:image/jpeg;base64,/9j/4AAQSkZJRgABAQAAAQABAAD/2wCEAAkGBwgHBgkIBwgKCgkLDRYPDQwMDRsUFRAWIB0iIiAdHx8kKDQsJCYxJx8fLT0tMTU3Ojo6Iys/RD84QzQ5OjcBCgoKDQwNGg8PGjclHyU3Nzc3Nzc3Nzc3Nzc3Nzc3Nzc3Nzc3Nzc3Nzc3Nzc3Nzc3Nzc3Nzc3Nzc3Nzc3Nzc3N//AABEIAJQAlAMBIgACEQEDEQH/xAAcAAACAgMBAQAAAAAAAAAAAAAABwUGAQQIAwL/xABJEAABAwIDAgkHCQYEBwEAAAABAAIDBBEFBiESMQcTQVFhcXOxsiIyNnKBkaEIFBUjNTdSs8EWJEJi0eF0g5KiJSY0Q1NUdRf/xAAWAQEBAQAAAAAAAAAAAAAAAAAAAQL/xAAWEQEBAQAAAAAAAAAAAAAAAAAAEQH/2gAMAwEAAhEDEQA/AHihCEAhCEAhCEGCbLzFRC6YwiVhlGpYHDaA6l8V+38yn4p5jk4t2y8C5abaFKvJuWhLT1tY6r42piqg6CraS2SN7XeXcct+vUFA3LoWG7llAIQviWQRRPkdfZaLmyD7Qon9oKLml/0/3XvR4rTVkwih29q19W2CDfQhCAQvOeVsML5XX2WNLjZan0rB5Gj/ACyANOdBvoWEIMoQhAKAzrmE5awR9cyndUSueI42BpI2iCbutuGh+Cn1GY8GupYw4AgycvUUFdyjmjFMSkovpSlp/m9fG59NUUugu3Uhw2jodbFXO4AudLb1RM3YoMsZbgxKio4XvgqQWwjyA8kEcg6bpL5lzjmjMr9nEa18cLgT8zpbxst0tvcj1iVB0DiecsuRTOw76YpH1r7sEMcm24HmNr29qqPBLWCryxWyE6uqS+3rBrv1SRpqhlO0xtjbHIQQ11ru9/Jv5AmBlOrqMNydj3zZ7onjiNkjTZ3AkexFPbD8Qo8Rp21GH1UFVCd0kMge33hbS5Qopa3CaiGqy9iVRDK+xHEyHbkIP"
     }
   ],
-  "cart": []
+  "cart": [
+    {
+      "id": "81b3",
+      "productId": "15",
+      "title": "Canon EOS R10",
+      "price": 89990,
+      "image": "https://images.unsplash.com/photo-1519183071298-a2962eadcdb2?auto=format&fit=crop&w=800&q=80",
+      "category": "Camera",
+      "quantity": 1,
+      "totalPrice": 89990
+    },
+    {
+      "id": "9ad5",
+      "productId": "3",
+      "title": "Sony WH-1000XM5 Headphones",
+      "price": 29990,
+      "image": "https://encrypted-tbn1.gstatic.com/shopping?q=tbn:ANd9GcQ_BfgVVX2prN0xuhV9fycaTWXESusQaEiicOf9Fk2Lw2s9qmmoz3FITVM7pKWHX1_WOlZLEfv9RiGx786vO0q-hPzkJPeTfqw87IJMywCJe-Z0whY-4STsVStZI4ryFQILxR34JQ&usqp=CAc",
+      "category": "Headphones",
+      "quantity": 2,
+      "totalPrice": 59980
+    },
+    {
+      "id": "44ef",
+      "productId": "6",
+      "title": "Apple Watch Series 9",
+      "price": 41900,
+      "image": "https://encrypted-tbn0.gstatic.com/shopping?q=tbn:ANd9GcTfxrmqLWBBB4Kq72bcJIDKymaI6NPJNPC3IEezlS9UWM1X0rB1VexvkqJ0IeXYkOsMN_7CdeIFux976QaLt4kx0XexXBguyHZSXe6ZVARvNrfXOkvAinChUDZfB6RjRwzVnIYloA&usqp=CAc",
+      "category": "Smartwatch",
+      "quantity": 1,
+      "totalPrice": 41900
+    }
+  ]
 }
