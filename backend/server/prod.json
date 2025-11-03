@@ -11,7 +11,7 @@
     {
       "id": "5",
       "title": "Dell XPS 15 9530",
-      "price": "1577",
+      "price": "15777",
       "category": "Laptop",
       "description": "Powerful performance laptop with Intel i9 processor, NVIDIA RTX graphics, and stunning 4K InfinityEdge display.",
       "image": "https://images.unsplash.com/photo-1588872657578-7efd1f1555ed?auto=format&fit=crop&w=800&q=80"
@@ -203,34 +203,24 @@
   ],
   "cart": [
     {
-      "id": "81b3",
-      "productId": "15",
-      "title": "Canon EOS R10",
-      "price": 89990,
-      "image": "https://images.unsplash.com/photo-1519183071298-a2962eadcdb2?auto=format&fit=crop&w=800&q=80",
-      "category": "Camera",
+      "id": "9347",
+      "productId": "5",
+      "title": "Dell XPS 15 9530",
+      "price": "15777",
+      "image": "https://images.unsplash.com/photo-1588872657578-7efd1f1555ed?auto=format&fit=crop&w=800&q=80",
+      "category": "Laptop",
       "quantity": 1,
-      "totalPrice": 89990
+      "totalPrice": "15777"
     },
     {
-      "id": "9ad5",
+      "id": "d736",
       "productId": "3",
       "title": "Sony WH-1000XM5 Headphones",
       "price": 29990,
       "image": "https://encrypted-tbn1.gstatic.com/shopping?q=tbn:ANd9GcQ_BfgVVX2prN0xuhV9fycaTWXESusQaEiicOf9Fk2Lw2s9qmmoz3FITVM7pKWHX1_WOlZLEfv9RiGx786vO0q-hPzkJPeTfqw87IJMywCJe-Z0whY-4STsVStZI4ryFQILxR34JQ&usqp=CAc",
       "category": "Headphones",
-      "quantity": 2,
-      "totalPrice": 59980
-    },
-    {
-      "id": "44ef",
-      "productId": "6",
-      "title": "Apple Watch Series 9",
-      "price": 41900,
-      "image": "https://encrypted-tbn0.gstatic.com/shopping?q=tbn:ANd9GcTfxrmqLWBBB4Kq72bcJIDKymaI6NPJNPC3IEezlS9UWM1X0rB1VexvkqJ0IeXYkOsMN_7CdeIFux976QaLt4kx0XexXBguyHZSXe6ZVARvNrfXOkvAinChUDZfB6RjRwzVnIYloA&usqp=CAc",
-      "category": "Smartwatch",
       "quantity": 1,
-      "totalPrice": 41900
+      "totalPrice": 29990
     }
   ]
 }
