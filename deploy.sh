@@ -21,6 +21,6 @@ echo "Builing Docker image"
 sudo docker build -t react-app .
 echo "running container"
 
-docker run -d --name react-app -p 80:80 react-app
+sudo docker run -d --name react-app -p 80:80 react-app
 
 echo "deployment completed"
