@@ -9,15 +9,16 @@ then
     sudo yum install docker -y
     sudo systemctl start docker
     sudo systemctl enable docker
-    sudo usermod -aG docker ec2-user       
+    sudo usermod -aG docker ec2-user 
+    sudo chmod 666 /var/run/docker.sock
 fi
 echo "Stopping old container"
-docker stop react-app || true
-docker rm react-app || true
-echo "removing old image"
-docker rmi react-app || true
+sudo docker stop react-app || true
+sudo docker rm react-app || true
+sudo echo "removing old image"
+sudo docker rmi react-app || true
 echo "Builing Docker image"
-docker build -t react-app .
+sudo docker build -t react-app .
 echo "running container"
 
 docker run -d --name react-app -p 80:80 react-app
