@@ -33,6 +33,13 @@ jobs :
         username: ec2-user
         key: ${{ secrets.EC2_KEY }}
 
+     - name: Debug Secrets
+       run: |
+        echo "Host is set: ${{ secrets.EC2_HOST != '' }}"
+        echo "Key is set: ${{ secrets.EC2_KEY != '' }}"
+        echo "Host length: ${#${{ secrets.EC2_HOST }}}"
+        echo "Key starts with: $(echo '${{ secrets.EC2_KEY }}' | head -c 30)"
+
         script: |
           cd /home/ec2-user/react-app
           chmod +x deploy.sh
