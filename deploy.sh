@@ -9,7 +9,7 @@ then
     sudo yum install docker -y
     sudo systemctl start docker
     sudo systemctl enable docker
-    sudo usermode -aG docker ec2-user       
+    sudo usermod -aG docker ec2-user       
 fi
 echo "Stopping old container"
 docker stop react-app || true
